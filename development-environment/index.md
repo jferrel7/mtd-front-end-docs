@@ -5,11 +5,11 @@ title: MTD Front-End Docs / Development Environment
 
 # Development Environment Setup
 
-## For Windows Machines
+## For Windows 
 
 ### 1. Download and Install Ruby 2.0
 
-* Download and install - [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
+* Download and install Ruby 2.0.0-p647 - [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
 
 During the install process, be sure to check "Add Ruby executables to your PATH"
 
@@ -29,7 +29,7 @@ During the install process, be sure to check "Add Ruby executables to your PATH"
 
 ### 4. Download and Install Git 
 
-* Download and install - [https://git-scm.com/download/win](https://git-scm.com/download/win)
+* Download and install - [https://git-scm.com/download/Windows](https://git-scm.com/download/win)
 * During install select to "Use Git Bash only"
 
 ### 5. Install Bundler gem
@@ -47,3 +47,8 @@ During the install process, be sure to check "Add Ruby executables to your PATH"
 
 * Type "thin -R config.ru start"
 * View app at "http://localhost:4567/troybilt" 
+* You can also run the local thin webserver using your IP address. This is useful while testing on other devices, etc. Type "thin - R config.ru -a 192.168.1.7 -p 4567 start"
+
+## For Macs
+
+ToDo
