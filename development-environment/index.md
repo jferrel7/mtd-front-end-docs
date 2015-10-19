@@ -5,7 +5,10 @@ title: MTD Front-End Docs / Development Environment
 
 # Development Environment Setup
 
-## For Windows 
+* [Instructions For Windows](#instructions-for-windows)
+* [Instructions For Mac](#instructions-for-mac)
+
+## Instructions For Windows 
 
 ### 1. Download and Install Ruby 2.0
 
@@ -49,6 +52,6 @@ During the install process, be sure to check "Add Ruby executables to your PATH"
 * View app at "http://localhost:4567/troybilt" 
 * You can also run the local thin webserver using your IP address. This is useful while testing on other devices, etc. Type "thin - R config.ru -a 192.168.1.7 -p 4567 start"
 
-## For Macs
+## Instructions For Mac
 
 ToDo

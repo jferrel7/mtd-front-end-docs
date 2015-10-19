@@ -5,6 +5,10 @@ title: MTD Front-End Docs / Repository
 
 # Repository (Repo)
 
+* [Version Control](#version-control)
+* [Cloning the Repo](#cloning-the-repo)
+* [Commits](#commits)
+
 ### Version Control
 
 The repository for the MTD front-end code uses Git for version control and is stored on Bitbucket to allow collaboration. 
