@@ -9,12 +9,12 @@ title: MTD Front-End Docs
 
 ## [Development Environment](/development-environment)
 
-## Front-End Strategy (To-Do)
+## [Front-End Strategy](/front-end-strategy)
 
-## Routes &amp; Templates (To-Do)
+## Routes &amp; Templates (In progress)
 
-## CSS (To-Do)
+## CSS (In progress)
 
-## Javascript (To-Do)
+## Javascript (In progress)
 
-## Deployment to Heroku (To-Do)
+## Deployment to Heroku (In progress)

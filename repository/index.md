@@ -29,10 +29,12 @@ You can now change to the mtd-shared-checkout directory to verify you have the f
 
 Once you are in the directory where you would like the repo stored via a command prompt.  Type `git clone https://{insert_bitbucket_username}@bitbucket.org/jferrell/mtd-shared-checkout.git`
 
+Enter your password when prompted.
+
 You can now change to the mtd-shared-checkout directory to verify you have the files.
 
 ### Commits
 
-Before doing any work, it's best to pull down any changes from Bitbucket. Type `git pull origin master`.
+Before doing any work on the repo, it's best to pull down any changes from Bitbucket that have been added by other developers. Type `git pull origin master`.
 
-As we are working across many sites, it is helpful for commit messages to include the site you are working on. For example, `git commit -m 'troybilt: product detail template complete'
+As we are working across many sites, it is helpful for commit messages to include the site you are working on. For example, `git commit -m 'troybilt: product detail template complete'`
