@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">MTD Front-End Docs</h1>
+      <h1 class="project-name"><a href="/">MTD Front-End Docs</a></h1>
       <h2 class="project-tagline">Instructions, guidelines and coding standards for working with MTD Front-End technology.</h2>
       <a href="https://github.com/jferrel7/mtd-front-end-docs" class="btn">View on GitHub</a>
     </section>
@@ -32,13 +32,19 @@
 
 <p>Once SSH is set up on your Bitbucket account and you are in the directory where you would like the repo stored via a command prompt.  Type <code>git clone git@bitbucket.org:jferrell/mtd-shared-checkout.git</code></p>
 
-<p>You can now change to the mtd-shared-checkout directory.</p>
+<p>You can now change to the mtd-shared-checkout directory to verify you have the files.</p>
 
 <h4 id="using-https">2. Using HTTPS</h4>
 
-<p>Once you are in the directory where you would like the repo stored via a command prompt.  Type <code>git clone https://jferrell@bitbucket.org/jferrell/mtd-shared-checkout.git</code></p>
+<p>Once you are in the directory where you would like the repo stored via a command prompt.  Type <code>git clone https://{insert_bitbucket_username}@bitbucket.org/jferrell/mtd-shared-checkout.git</code></p>
 
-<p>You can now change to the mtd-shared-checkout directory.</p>
+<p>You can now change to the mtd-shared-checkout directory to verify you have the files.</p>
+
+<h3 id="commits">Commits</h3>
+
+<p>Before doing any work, it’s best to pull down any changes from Bitbucket. Type <code>git pull origin master</code>.</p>
+
+<p>As we are working across many sites, it is helpful for commit messages to include the site you are working on. For example, `git commit -m ‘troybilt: product detail template complete’</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/jferrel7/mtd-front-end-docs">mtd-front-end-docs</a> is maintained by <a href="https://github.com/jferrel7">jferrel7</a>.</span>
