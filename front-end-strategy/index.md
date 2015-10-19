@@ -5,8 +5,8 @@ title: MTD Front-End Docs / Front-End Strategy
 
 # Front-End Strategy
 
-* [Overview](#instructions-for-windows)
-* [Strategy](#instructions-for-mac)
+* [Overview](#overview)
+* [Strategy](#strategy)
 
 ## Overview
 
@@ -32,4 +32,4 @@ A more [in depth explainer for AppCache at MTD](/front-end-strategy/app-cache.ht
 
 In order to provide the best performance we can, a page should only load images, CSS or Javascript that are needed for the given page, aka route. 
 
-If the user is coming to the site via a link from a search they performed on Google for a product, we don't need to load any front-end code that is not related to the rendering of our site shell (global header and footer) or the product page. 
+If the user is coming to the site via a link from a search they performed on Google for a product, we don't need to load any front-end code that is not related to the rendering of our site shell (global header and footer) or the product page that the user requested. 
