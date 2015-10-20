@@ -48,8 +48,8 @@ manifest.appcache contains the list of files we want cached. Note: Your web serv
 need to be configured so that files with the extension .appcache are served with the mime type
 of “text/cache-manifest”.
 
-## How do we bust the cache when needed?
+## How do we invalidate the cache when needed?
 
-The manifest.appcache allows us to bust the cache. By simply bumping the version number
+The manifest.appcache allows us to invalidate the cache. By simply bumping the version number
 inside the file. We currently do this manually, as it typically shouldn’t be invalidated very
 frequently.

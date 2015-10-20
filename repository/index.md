@@ -7,6 +7,8 @@ title: MTD Front-End Docs / Repository
 
 * [Version Control](#version-control)
 * [Cloning the Repo](#cloning-the-repo)
+  * [Using SSH](#using-ssh)
+  * [Using HTTPS](#using-https)
 * [Commits](#commits)
 
 ### Version Control
