@@ -7,6 +7,7 @@ title: MTD Front-End Docs / CSS
 
 * [Coding Style](#coding-style)
 * [Namespacing](#namespacing)
+* [Using REMs](#using-rems)
 * [Common Elements](#common-elements)
 * [CSS File Locations](#css-file-locations)
 
