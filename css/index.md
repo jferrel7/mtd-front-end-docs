@@ -16,11 +16,33 @@ title: MTD Front-End Docs / CSS
 Use existing responsive CSS files as guides for any updates needed or for new CSS files. Here are some coding styles to follow as well:
 
 * Only use one CSS selector per line when multiple elements are targeted using a single style block. This keeps the CSS easy to read and maintain.
+Example:
+
+<pre><code>.r-kc h1, 
+.r-kc h2 {
+  color: #000;
+}
+</code></pre>
+
 * Use 2 spaces for tabs
 * Keep style blocks and selectors indented (including inside media query blocks) appropriately for better readability.
 * Place comments at the top of new CSS files that describe the intended usage.
-* Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don't cause bloat in the file.
+
+<pre><code>
+/* 
+  Knowledge Center Stylesheet
+
+  Contains all base styling for Knowledge Center landing, category and subcategory pages.
+*/
+</code></pre>
+* Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don't cause bloat in the file. Class names in the CSS files should add some context when reading them thereby removing the need to comment heavily when writing your CSS.
 * When adding a media query, use em to specify any sizes. Place a comment directly above the media query to indicate the pixel size.
+Example:
+<pre><code>/* 960px */
+@media only screen and (min-width: 60em) {
+....
+}
+</code></pre>
 
 ## Namespacing 
 
@@ -28,9 +50,14 @@ In order to separate styles logically and to avoid conflicts with other styles t
 
 We use class names prefixed with `.r-` for our first selector of a page or component. All styles that relate to that page or component should use that selector to set any styles within the page or component. 
 
-The remainder of a namespaced class name might be like `.r-home` for homepage, `.r-kc` for Knowledge Center. The important part is that all CSS styles use this prefix for a given page or component so that we avoid style conflicts and any given page has as few dependencies on other code elsewhere.
+The remainder of a namespaced class name would be like `.r-home` for homepage, `.r-kc` for Knowledge Center. The important part is that all CSS styles use this prefix for a given page or component so that we avoid style conflicts and any given page has as few dependencies on other code elsewhere.
 
 An example: setting an h1 style on the homepage, the selector would be `.r-home h1`. 
+
+<pre><code>.r-home h1 {
+  color: #000;
+}
+</code></pre>
 
 ## Using REMs
 

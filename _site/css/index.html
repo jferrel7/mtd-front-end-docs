@@ -21,6 +21,7 @@
 <ul>
   <li><a href="#coding-style">Coding Style</a></li>
   <li><a href="#namespacing">Namespacing</a></li>
+  <li><a href="#using-rems">Using REMs</a></li>
   <li><a href="#common-elements">Common Elements</a></li>
   <li><a href="#css-file-locations">CSS File Locations</a></li>
 </ul>
@@ -30,13 +31,39 @@
 <p>Use existing responsive CSS files as guides for any updates needed or for new CSS files. Here are some coding styles to follow as well:</p>
 
 <ul>
-  <li>Only use one CSS selector per line when multiple elements are targeted using a single style block. This keeps the CSS easy to read and maintain.</li>
+  <li>Only use one CSS selector per line when multiple elements are targeted using a single style block. This keeps the CSS easy to read and maintain.
+Example:</li>
+</ul>
+
+<pre><code>.r-kc h1, 
+.r-kc h2 {
+  color: #000;
+}
+</code></pre>
+
+<ul>
   <li>Use 2 spaces for tabs</li>
   <li>Keep style blocks and selectors indented (including inside media query blocks) appropriately for better readability.</li>
   <li>Place comments at the top of new CSS files that describe the intended usage.</li>
-  <li>Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don’t cause bloat in the file.</li>
-  <li>When adding a media query, use em to specify any sizes. Place a comment directly above the media query to indicate the pixel size.</li>
 </ul>
+
+<pre><code>
+/* 
+  Knowledge Center Stylesheet
+
+  Contains all base styling for Knowledge Center landing, category and subcategory pages.
+*/
+</code></pre>
+<ul>
+  <li>Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don’t cause bloat in the file. Class names in the CSS files should add some context when reading them thereby removing the need to comment heavily when writing your CSS.</li>
+  <li>When adding a media query, use em to specify any sizes. Place a comment directly above the media query to indicate the pixel size.
+Example:</li>
+</ul>
+<pre><code>/* 960px */
+@media only screen and (min-width: 60em) {
+....
+}
+</code></pre>
 
 <h2 id="namespacing">Namespacing</h2>
 
@@ -44,9 +71,14 @@
 
 <p>We use class names prefixed with <code>.r-</code> for our first selector of a page or component. All styles that relate to that page or component should use that selector to set any styles within the page or component.</p>
 
-<p>The remainder of a namespaced class name might be like <code>.r-home</code> for homepage, <code>.r-kc</code> for Knowledge Center. The important part is that all CSS styles use this prefix for a given page or component so that we avoid style conflicts and any given page has as few dependencies on other code elsewhere.</p>
+<p>The remainder of a namespaced class name would be like <code>.r-home</code> for homepage, <code>.r-kc</code> for Knowledge Center. The important part is that all CSS styles use this prefix for a given page or component so that we avoid style conflicts and any given page has as few dependencies on other code elsewhere.</p>
 
 <p>An example: setting an h1 style on the homepage, the selector would be <code>.r-home h1</code>.</p>
+
+<pre><code>.r-home h1 {
+  color: #000;
+}
+</code></pre>
 
 <h2 id="using-rems">Using REMs</h2>
 
