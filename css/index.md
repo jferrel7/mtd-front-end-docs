@@ -28,6 +28,7 @@ Example:
 * Keep style blocks and selectors indented (including inside media query blocks) appropriately for better readability.
 * Place comments at the top of new CSS files that describe the intended usage.
 
+*Example:*
 <pre><code>
 /* 
   Knowledge Center Stylesheet
@@ -37,7 +38,8 @@ Example:
 </code></pre>
 * Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don't cause bloat in the file. Class names in the CSS files should add some context when reading them thereby removing the need to comment heavily when writing your CSS.
 * When adding a media query, use em to specify any sizes. Place a comment directly above the media query to indicate the pixel size.
-Example:
+
+*Example:*
 <pre><code>/* 960px */
 @media only screen and (min-width: 60em) {
 ....
@@ -54,6 +56,7 @@ The remainder of a namespaced class name would be like `.r-home` for homepage, `
 
 An example: setting an h1 style on the homepage, the selector would be `.r-home h1`. 
 
+*Example:*
 <pre><code>.r-home h1 {
   color: #000;
 }
