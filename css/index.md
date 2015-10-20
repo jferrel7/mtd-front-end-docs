@@ -8,7 +8,7 @@ title: MTD Front-End Docs / CSS
 * [Coding Style](#coding-style)
 * [Namespacing](#namespacing)
 * [Common Elements](#common-elements)
-* [CSS File Locations](#file-locations)
+* [CSS File Locations](#css-file-locations)
 
 ## Coding Style
 
@@ -21,7 +21,7 @@ Use existing responsive CSS files as guides for any updates needed or for new CS
 * Comments throughout the remainder of the CSS file should be used sparingly and only when absolutely necessary so we don't cause bloat in the file.
 * When adding a media query, use em to specify any sizes. Place a comment directly above the media query to indicate the pixel size.
 
-### Namespacing 
+## Namespacing 
 
 In order to separate styles logically and to avoid conflicts with other styles that could be on a page, we use namespacing heavily to help avoid issues and keep our CSS stored in a modular manner.
 
@@ -31,7 +31,7 @@ The remainder of a namespaced class name might be like `.r-home` for homepage, `
 
 An example: setting an h1 style on the homepage, the selector would be `.r-home h1`. 
 
-### Using REMs
+## Using REMs
 
 We use REMs to specify font sizes, line height, padding and margins. 
 
@@ -49,6 +49,6 @@ Adding new common elements to global-content.css should be done only when truly 
 
 The following paths are where new responsive CSS files are stored in the mtd-shared-checkout repo.
 
-* Troy-Bilt - /public/wcsstore/Troy/css/r/
-* Cub Cadet - /public/wcsstore/Cub/css/r/
-* MTD Parts - /public/wcsstore/BuyMTDOnlineUS/css/r/
+* Troy-Bilt - `/public/wcsstore/Troy/css/r/`
+* Cub Cadet - `/public/wcsstore/Cub/css/r/`
+* MTD Parts - `/public/wcsstore/BuyMTDOnlineUS/css/r/`
