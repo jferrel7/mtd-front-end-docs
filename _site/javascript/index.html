@@ -20,17 +20,99 @@
 
 <ul>
   <li><a href="#coding-style">Coding Style</a></li>
+  <li><a href="#common-css-classes-used-in-the-javascript">Common CSS Classes Used in the Javascript</a></li>
+  <li><a href="#common-url-query-parameters-used-in-the-javascript">Common URL Query Parameters used in the Javascript</a></li>
+  <li><a href="#js-libraries-included-in-globalminjs">JS Libraries Included in global.min.js</a></li>
   <li><a href="#js-file-locations">JS File Locations</a></li>
 </ul>
 
 <h2 id="coding-style">Coding Style</h2>
 
-<p>Custom javascript files use the object literal syntax. The following items also highlight some javascript best practices we attempt to follow.</p>
+<p>Custom javascript files use the object literal syntax currently.</p>
+
+<p>Function names should be descriptive enough so that when another developer reads the function name, it is clear what the function does.</p>
+
+<p>Javascript files are broken down into logical components. That could be a page or certain group of pages that have shared JS functionality, like Knowledge Center (e.g. <code>/public/wcsstore/Troy/javascript/r/components/knowledge-center.js</code>). Or whether it is more component based and used on many pages, like Product Ratings stars (<code>/public/wcsstore/Cub/javascript/components/product-ratings.js</code>).</p>
+
+<p>The following items also highlight some javascript best practices we attempt to follow.</p>
 
 <ul>
-  <li>Cache jQuery lookups on page load</li>
-  <li>If a variable needs to be shared</li>
+  <li>Cache jQuery lookups on page load where possible.</li>
+  <li>Keep variables within functions unless the variable needs to be accessed by other functions.</li>
+  <li>When binding to events, consider the number of possible elements on the page that your code will apply to. If there could be more than 2-3 elements, than scope the event to the document body or other wrapping HTML element so you can apply the event like below. The technique below would only apply one event, which is much better for performance.</li>
 </ul>
+
+<p><em>Example:</em></p>
+<pre><code>$filterContainer.on('click', '.' + filterCategoryClass, function(e) {
+  e.preventDefault();
+  ...
+}
+</code></pre>
+
+<h2 id="common-css-classes-used-in-the-javascript">Common CSS Classes Used in the Javascript</h2>
+
+<p>There are various shared and common CSS classes that enevitably need to be used in the javascript. We keep these various classes in global-site.js (which is bundled in global.min.js) so that they aren’t littered over all of our other javascript files. Here’s an example from the current Cub Cadet global-site.js:</p>
+
+<p><em>Example:</em></p>
+<pre><code>var activeClass = 'active',
+    expandedClass = 'expanded',
+    hideClass = 'hide',
+    invalidClass = 'invalid',
+    openClass = 'open',
+    showClass = 'show',
+    toggleClass = 'toggle';
+
+  cubcadet.css = {
+    active: activeClass,
+    expanded: expandedClass,
+    hide: hideClass,
+    invalid: invalidClass,
+    open: openClass,
+    show: showClass,
+    toggle: toggleClass
+  }
+</code></pre>
+
+<p>To access these CSS class names from your javascript file, use the code snippet below as a reference and substitute whichever class name you need. We are using the “active” class name below:</p>
+
+<p><em>Example:</em></p>
+<pre><code>$btnSearch.removeClass(cubcadet.css.active);
+</code></pre>
+
+<h2 id="common-url-query-parameters-used-in-the-javascript">Common URL Query Parameters used in the Javascript</h2>
+
+<p>As with CSS class names, we often need to refer to query parameters that apply to WebSphere Commerce. We want to keep our JS code so that it matches query parameters used in Commerce so we keep those query parameter’s in global-site.js as well.</p>
+
+<p><em>Example:</em></p>
+<pre><code>  troybilt.urlParams = {
+    searchTerm: 'searchTerm'
+  }
+</code></pre>
+
+<p>To access a URL param that is stored in global-site.js in your javascript file, use the snippet bleow as a reference. We are accessing the “searchTerm” query parameter.</p>
+
+<p><em>Example:</em></p>
+<pre><code>url.setQuery(TROYBILT.urlParams.searchTerm, $searchInput.val());
+</code></pre>
+
+<h2 id="js-libraries-included-in-globalminjs">JS Libraries Included in global.min.js</h2>
+
+<ol>
+  <li><a href="https://useiconic.com"><strong>Iconic</strong></a> - Injects SVG icons and provides fallback to images for browsers that don’t support SVG.</li>
+  <li><a href="http://medialize.github.io/URI.js/"><strong>URI.js</strong></a> - Javascript library for working with and manipulating
+URLs</li>
+  <li><a href="https://github.com/aFarkas/lazysizes"><strong>Lazysizes</strong></a> - Lazy loader for images
+(responsive and normal), iframes and more, that detects any visibility
+changes triggered through user interaction, CSS or JavaScript without
+configuration.</li>
+  <li><a href="http://julian.com/research/velocity/"><strong>Velocity</strong></a> - An animation engine with the
+best of jQuery and CSS transitions combined.</li>
+  <li><a href="http://cherne.net/brian/resources/jquery.hoverIntent.html"><strong>Hover Intent</strong></a> -
+Mega menu hover library that uses slight delay of mouseover event to
+prevent accidental loading of mega menu content.</li>
+  <li><a href="https://github.com/ftlabs/fastclick"><strong>FastClick</strong></a> - A library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers.</li>
+  <li><a href="http://hammerjs.github.io"><strong>Hammer</strong></a> - Only used on Troy-Bilt currently. A library that can recognize gestures made by touch, mouse and pointerEvents.</li>
+</ol>
 
 <h2 id="js-file-locations">JS File Locations</h2>
 

@@ -13,7 +13,7 @@ title: MTD Front-End Docs
 
 ## [CSS](/css)
 
-## Javascript (In progress)
+## [Javascript](/javascript)
 
 ## Images (In progress)
 
