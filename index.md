@@ -15,7 +15,7 @@ title: MTD Front-End Docs
 
 ## [Javascript](/javascript)
 
-## Images (In progress)
+## [Images](/images)
 
 ## Routes &amp; Templates (In progress)
 

@@ -16,8 +16,8 @@ title: MTD Front-End Docs / CSS
 Use existing responsive CSS files as guides for any updates needed or for new CSS files. Here are some coding styles to follow as well:
 
 * Only use one CSS selector per line when multiple elements are targeted using a single style block. This keeps the CSS easy to read and maintain.
-Example:
 
+*Example:*
 <pre><code>.r-kc h1, 
 .r-kc h2 {
   color: #000;
