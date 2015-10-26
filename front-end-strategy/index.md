@@ -7,6 +7,10 @@ title: MTD Front-End Docs / Front-End Strategy
 
 * [Overview](#overview)
 * [Strategy](#strategy)
+  * [Siloing Global Header and Footer](#siloing-global-header-and-footer)
+  * [Caching with AppCache](#caching-with-appcache)
+  * [Route Based Resource Loading](#route-based-resource-loading)
+  * [Lazy Loading Images](#lazy-loading-images)
 
 ## Overview
 
