@@ -16,25 +16,28 @@
       <a href="https://github.com/jferrel7/mtd-front-end-docs" class="btn">View on GitHub</a>
     </section>
     <section class="main-content">
-  <h1 id="table-of-contents">Table of Contents</h1>
+  <h1 id="build-process">Build Process</h1>
 
-<h2 id="code-repositoryrepository">1. <a href="/repository">Code Repository</a></h2>
+<ul>
+  <li><a href="#grunt">Grunt</a></li>
+  <li><a href="#concatentation-and-minification">Concatenation and Minification</a></li>
+</ul>
 
-<h2 id="installing-development-environmentdevelopment-environment">2. <a href="/development-environment">Installing Development Environment</a></h2>
+<h2 id="grunt">Grunt</h2>
 
-<h2 id="front-end-strategyfront-end-strategy">3. <a href="/front-end-strategy">Front-End Strategy</a></h2>
+<p><a href="http://gruntjs.com/">Grunt</a> is currently used as the build tool of choice on all MTD front-end sites.</p>
 
-<h2 id="csscss">4. <a href="/css">CSS</a></h2>
+<p>Each site includes a <code>responsive-build</code> directory in the wcstore brand folders (e.g. <code>/public/wcsstore/Troy/responsive-build</code>). This directory includes the Grunt configuration file and is where concatenated and minfied files are written too when the grunt task is ran.</p>
 
-<h2 id="javascriptjavascript">5. <a href="/javascript">Javascript</a></h2>
+<p>The grunt task is only needed if and when a change is made to normalize.css, global-base.css, global-site.js, global-header.js or global-footer.js.</p>
 
-<h2 id="imagesimages">6. <a href="/images">Images</a></h2>
+<h2 id="concatenation-and-minification">Concatenation and Minification</h2>
 
-<h2 id="routes-and-templatesroutes-and-templates">7. <a href="/routes-and-templates">Routes and Templates</a></h2>
+<p>Currently, only resources used by the global header and footer are included in concatenation and minification tasks. For JS, the grunt config file includes all of our <a href="/javascript/#js-libraries-included-in-globalminjs">standard JS libraries</a> as well.</p>
 
-<h2 id="build-processbuild-process">8. <a href="/build-process">Build Process</a></h2>
+<p>global.min.js and global.min.css are the names of the files produced when running the grunt task.</p>
 
-<h2 id="deployment-to-herokudeployment-to-heroku">9. <a href="/deployment-to-heroku">Deployment to Heroku</a></h2>
+<p>At some point in the future, we may want to try and concatenate and minfiy other “bundles” to support our route based loading of CSS and JS. However, we are not at that point yet and need to get the current front-end strategy in place and functioning.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/jferrel7/mtd-front-end-docs">mtd-front-end-docs</a> is maintained by <a href="https://github.com/jferrel7">jferrel7</a>.</span>

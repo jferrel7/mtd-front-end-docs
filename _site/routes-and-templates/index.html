@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MTD Front-End Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name"><a href="/">MTD Front-End Docs</a></h1>
+      <h2 class="project-tagline">Instructions, guidelines and coding standards for working with MTD Front-End technology.</h2>
+      <a href="https://github.com/jferrel7/mtd-front-end-docs" class="btn">View on GitHub</a>
+    </section>
+    <section class="main-content">
+  <h1 id="routes-amp-templates">Routes &amp; Templates</h1>
+
+<ul>
+  <li><a href="#sinatra">Sinatra</a></li>
+  <li><a href="#routes">Routes</a></li>
+  <li><a href="#templates">Templates</a></li>
+  <li><a href="#route-based-css-and-js">Route Based CSS and JS</a></li>
+  <li><a href="#models">Models</a></li>
+  <li><a href="#device-type-detection">Device Type Detection</a></li>
+  <li><a href="#multilingual">Multilingual</a></li>
+</ul>
+
+<h2 id="sinatra">Sinatra</h2>
+
+<p>The front-end code is powered by <a href="http://www.sinatrarb.com">Sinatra</a>, a Ruby based gem for creating web applications.</p>
+
+<h2 id="routes">Routes</h2>
+
+<p>Using the <em>app.rb</em> file in root of the repo, we can add routes (e.g. /troybilt/products/detail) that render the templates we want. Routes can be get, post, put, patch, delete. Any HTTP method is achievable.</p>
+
+<p>Routes for newer responsive sites are stored near the top of the file. They are grouped by brand so they are easily findable.</p>
+
+<h2 id="templates">Templates</h2>
+
+<p>All templates are stored in the views directory as .erb files. The views folder contains directories for each site.</p>
+
+<p>Any new responsive template, should be stored in views/brand/responsive folder. When we complete making all of the sites responsive, we will delete any old templates that remain outside of the views/brand/responsive folders.</p>
+
+<p>We use layout files to place global header and footers on all sites. Each brand’s layout file is included in their respective responsive folders.</p>
+
+<p>When new templates are added, please update any links in the site’s global header or footers as necessary. We want the front-end site to be as close to production as possible, so links should go to pages that exist. For example, the Parts and Support page exists for the Troy-Bilt site, so we updated the global header so that clicking on Parts and Support in the header takes us to that page.</p>
+
+<h2 id="route-based-css-and-js">Route Based CSS and JS</h2>
+
+<p>Each individual route is responsible for adding the necessary CSS and JS to include on the page. See our <a href="/front-end">front-end strategy</a> section for more information on why we chose this approach.</p>
+
+<p>For example, on the Troy-Bilt homepage route (e.g. /troybilt), we use a Ruby array variable @cssIncldes to include our homepage.css file. The layout file is already setup to check for our CSS and JS variables and will include them when the route is rendered.</p>
+
+<p><em>Example</em></p>
+<pre><code>@cssIncludes = ['/wcsstore/Troy/css/r/homepage.css']
+</code></pre>
+
+<p>An identical approach is used for JS files that are needed for a given route. The code below is needed for the Troy-Bilt Knowledge Center routes.</p>
+
+<p><em>Example</em></p>
+<pre><code>@jsIncludes = ['/wcsstore/Troy/javascript/r/components/knowledge-center.js']
+</code></pre>
+
+<h2 id="models">Models</h2>
+
+<p>In some cases, we use Ruby models to allow us to mock the Websphere Commerce functionality. That might be rendering content for products or adding an item to the cart. Models provide an easy way to make the front-end environment as close to Commerce as possible so minimal or no changes to any front-end files are required by MTD Engineers.</p>
+
+<h2 id="device-type-detection">Device Type Detection</h2>
+
+<p>In some cases, we need to render different HTML based on the device type the site is being used on. This doesn’t happen often, but is a handy tool to have available. The device detection is not dynamic on the local development environment, only the Heroku web server.</p>
+
+<p>Inside app.rb, in the <code>before do</code> section, we have 3 boolean variables (@isMobileDevice, @isTabletDevice, and @isDesktopDevice). When working in the local development environment, just set the variables how you need them.</p>
+
+<p>The Heroku environment, <a href="https://mtdp.co">https://mtdp.co</a>, uses the Wurfl Cloud gem to dynamically detect the device type and set our variables appropriately.</p>
+
+<h2 id="multilingual">Multilingual</h2>
+
+<p>The Sinatra app is also setup to support multilingual sites. The language files that contain keys and translations are stored in the locales directory located in the root of the repo. There is an English and French file currently. The keys are organized alphabetically.</p>
+
+<p>The Troy-Bilt layout file provides a good blueprint for using the multilingual capabilities.</p>
+
+<p><em>Example</em></p>
+<pre><code>&lt;%=I18n.t :order_tracking %&gt;
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jferrel7/mtd-front-end-docs">mtd-front-end-docs</a> is maintained by <a href="https://github.com/jferrel7">jferrel7</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+    </section>  
+  </body>
+</html>

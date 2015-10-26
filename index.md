@@ -5,20 +5,20 @@ title: MTD Front-End Docs
 
 # Table of Contents 
 
-## [Code Repository](/repository)
+## 1. [Code Repository](/repository)
 
-## [Installing Development Environment](/development-environment)
+## 2. [Installing Development Environment](/development-environment)
 
-## [Front-End Strategy](/front-end-strategy)
+## 3. [Front-End Strategy](/front-end-strategy)
 
-## [CSS](/css)
+## 4. [CSS](/css)
 
-## [Javascript](/javascript)
+## 5. [Javascript](/javascript)
 
-## [Images](/images)
+## 6. [Images](/images)
 
-## Routes &amp; Templates (In progress)
+## 7. [Routes and Templates](/routes-and-templates)
 
-## Build Process (In progress)
+## 8. [Build Process](/build-process)
 
-## Deployment to Heroku (In progress)
+## 9. [Deployment to Heroku](/deployment-to-heroku)

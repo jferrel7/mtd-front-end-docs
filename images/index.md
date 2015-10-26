@@ -5,9 +5,9 @@ title: MTD Front-End Docs / Images
 
 # Images
 
-* [Overview](#overview)
 * [Iconic Icons](#iconic-icons)
 * [Responsive Images](#responsive-images)
+* [Image Compression](#image-compression)
 * [FPO Images](#fpo-images)
 * [Image File Locations](#image-file-locations)
 
@@ -39,6 +39,14 @@ Retina images and non-retina images should be used to serve the appropriate imag
   &lt;/picture&gt;
 &lt;/span&gt;
 </code></pre>
+
+## Image Compression
+
+Any image that is going to be used on a site should be ran through an image compression tool. They help reduce the image filesize without losing quality. Most graphics editing software like Photoshop or Sketch don't do a very good job compressing images so after exporting them we need to run the image through an image compression tool.
+
+On Mac, [ImageOptim](https://imageoptim.com) is a good option to use. 
+
+On Windows, [File Optimizer](http://nikkhokkho.sourceforge.net/static.php?page=FileOptimizer) is an option.
 
 ## FPO Images
 
